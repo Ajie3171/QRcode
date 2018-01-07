@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ajie.com.qrcode.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:text="历史骑行"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地记录为空"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:textSize="25dp" />
+
+            <ListView
+                android:id="@+id/lv_his"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_dis"
+                tools:ignore="ObsoleteLayoutParam" />
+        </LinearLayout>
+
+
+        <fragment
+            android:id="@+id/drawer_layout_fragment"
+            android:name="ajie.com.qrcode.DrawerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            tools:ignore="MissingId" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="91dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:backgroundTint="@android:color/background_light"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:layout_behavior=""
+        app:srcCompat="@drawable/camera64"
+        tools:ignore="RtlHardcoded" />
+
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:padding="15dp"
+        android:id="@+id/iv_his"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/bicycle_64"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_his"
+        android:textSize="25dp"
+        android:text="2017年9月26日20:32:02"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:ignore="HardcodedText,SpUsage" />
+</LinearLayout>
